@@ -1,0 +1,45 @@
+{
+  "rules":{ 
+  "cap_button": { "editableType": "editable", "requires": ["cap_button_interior_NC","cap_crown_front"], "excludes": [null], "category": "button" },
+  "cap_button_interior_NC": { "editableType": "non-editable", "requires": ["cap button"], "excludes": [null], "category": "buttonInterior" },
+  "cap_crown_back": { "editableType": "editable", "requires": ["cap_crown_back_stitches"], "excludes": [null], "category": "crown" },
+  "cap_crown_back_logo": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_crown_back_stitches": { "editableType": "non-editable", "requires": ["cap crown back"], "excludes": [null], "category": "crown" },
+  "cap_crown_front": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_crown_front_stitches": { "editableType": "non-editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_eyelets_": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_front_decoration": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_interior_crown_NC_": { "editableType": "non-editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_left_decoration": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_pipe_back": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_pipe_front": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_pipe_sides": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  "cap_right_decoration": { "editableType": "editable", "requires": [null], "excludes": [null], "category": "crown" },
+  
+  
+  "cap_visor_curve": { "editableType": "editable", "requires": ["cap_visor_curve_interior_NC","cap_visor_curve_stitches"], "excludes": ["cap_visor_flat"], "category": "crown" },
+  "cap_visor_curve_interior_NC": { "editableType": "non-editable", "requires": [null], "excludes": [], "category": "crown" },
+  "cap_visor_curve_stitches": { "editableType": "non-editable", "requires": [null], "excludes": [], "category": "crown" },
+  
+  
+  "cap_visor_flat": { "editableType": "editable", "requires": ["cap_visor_flat_interior_NC","cap_visor_flat_stitches"], "excludes": ["cap_visor_curve"], "category": "crown" },
+  "cap_visor_flat_interior_NC": { "editableType": "non-editable", "requires": [null], "excludes": [], "category": "crown" },
+  "cap_visor_flat_stitches": { "editableType": "non-editable", "requires": [null], "excludes": [], "category": "crown" },
+  
+  
+  "My_First_Editable_Object": { "editableType": "editable", "requires": [null], "excludes": [], "category": "button" }
+},
+
+"class":{
+"visor":{
+  "objects":["cap_visor_curve","cap_visor_flat"], 
+  "display": true},
+"interior":{"objects":["cap_visor_curve_interior_NC", "cap_visor_flat_interior_NC"],"display": true},
+"stitches": {"objects": ["cap_visor_flat_stitches", "cap_visor_curve_stitches"], "display": true}
+},
+"objects":[
+{"id": "cap_visor_curve", "description": "Cap Cuved Visor", "code": "VSRF1", "priority": 100 },
+{"id":"cap_visor_flat", "description": "Cap Flat Visor", "code": "VSRC1", "priority": 101}
+]
+}
+

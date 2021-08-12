@@ -1,0 +1,5 @@
+{
+    "/cap/rules/:id": "/capRules/:id",
+    "/cap/class/": "/capclasses/",
+    "/cap/class/:id": "/capclasses/:id"
+    }

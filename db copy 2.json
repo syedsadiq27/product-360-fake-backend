@@ -1,0 +1,97 @@
+{
+  "rules": [
+    { "id": "BTNAC", "requires": ["CRNFC"], "includes": [], "excludes": ["BTNA1"] },
+    { "id": "BTNA1","requires": ["CRNB1", "CRNF1", "INTB1"],"excludes": ["BTNAC"] },
+
+    { "id": "CRNBC", "requires": ["CRNFC", "LGOAC"], "includes": ["STICC"], "excludes": [ "CRNBD","CRNB1"] },
+    { "id": "CRNBD", "requires": ["CRNFD"], "includes": [], "excludes": [ "CRNBC","CRNB1" ] },
+    { "id": "CRNB1","requires": ["CRNF1"],"includes":["EYEA1","STICB", "INTC2"],"excludes": [ "CRNBC","CRNBD"] },
+
+    { "id": "CRNFC", "requires": ["CRNBC","VSRAC"], "includes": [], "excludes": ["CRNF1","CRNFD"] },
+    { "id": "CRNFD", "requires": ["CRNBD","VSRAD"], "includes": [], "excludes": ["CRNFC","CRNF1"] },
+    { "id": "CRNF1","requires": ["STICF", "CRNB1"],"excludes": ["CRNFC","CRNFD"] },
+
+    { "id": "EYEA1","requires": [],"includes":["CRNB1", "CRNF1"],"excludes": ["EYEAC", "EYEAD"] },
+    { "id": "EYEAC","requires": [],"includes": [],"excludes": ["EYEA1","EYEAD"] },
+    { "id": "EYEAD", "requires": [], "includes": [], "excludes": ["EYEA1", "EYEAC"] },
+
+    { "id": "VSRAC", "requires": ["CRNBC","CRNFC" ], "includes": ["STIVC"], "excludes": ["VSRAD", "VSRF1","VSRC1"] },
+    { "id": "VSRAD", "requires": [], "includes": [], "excludes": ["VSRAC","VSRF1", "VSRF1"] },
+    { "id": "VSRF1","includes": ["INTF1", "STIF1"],"excludes": ["VSRC1","VSRAD", "VSRAC"],"requires":["CRNF1"] },
+    { "id": "VSRC1","requires":["CRNF1"],"includes": ["INTC1", "STIC1"],"excludes": ["VSRF1","VSRAD", "VSRAC" ] },
+  
+
+    { "id": "INTCC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "INTVC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "INTB1","requires": [],"excludes": [] },
+    { "id": "INTC2","requires": [],"excludes": [] },
+    { "id": "INTF1","requires": ["CRNB1"] },
+    { "id": "INTC1"},
+
+
+    { "id": "LGOAC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STICC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STIVC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STICB" },
+    { "id": "STICF" },
+    { "id": "STIF1","requires":["VSRF1"] },
+    { "id": "STIC1","excludes":["STIF1"] },
+   
+    { "id": "DCKB1","requires": [],"excludes": [] },
+    { "id": "DCKF1","requires": [],"excludes": [] },
+    { "id": "DCKR1","requires": [],"excludes": [] },
+    { "id": "DCKL1","requires": [],"excludes": [] }
+ 
+  ],
+  "class": [
+    { "id": "visor","display": true,"description": "Visor","sequence": 100,"objects": ["VSRAC", "VSRAD"] },
+    { "id": "button","display": true,"description": "Button","sequence": 100,"objects": ["BTNAC", "BTNA1"] },
+    { "id": "crown","display": true,"description": "Crown","sequence": 100,"objects": ["CRNBC", "CRNFC", "CRNBD", "CRNFD", "CRNB1", "CRNF1"] },
+    { "id": "eyelets","display": true,"description": "Eyelets","sequence": 100,"objects": ["EYEAD"] },
+    { "id": "logo","display": true,"description": "Logo","sequence": 100,"objects": ["LGOAC"] },
+    { "id": "stitches","display": true,"description": "Stitches","sequence": 100,"objects": ["STICC", "STIVC"] },
+    { "id": "decorations","description": "Decorations","sequence": 125,"objects": ["DCKF1", "DCKB1", "DCKR1", "DCKL1"],"display": true,"parentCategory": "cap"}
+  ],
+  "objects": [
+    { "id": "BTNAC","description": "Button 2","code": "button_85d","path": "/cap/button/BTNAC.glb","type": "editable" },
+    { "id": "CRNBC","description": "Crown_Back 2","code": "crown_back_85d","path": "/cap/crown/CRNBC.glb","type": "editable" },
+    { "id": "CRNFC","description": "Crown_Front 2","code": "crown_front_85d","path": "/cap/crown/CRNFC.glb","type": "editable" },
+    { "id": "EYEAD","description": "Eyelets 2","code": "eyelets_85d","path": "/cap/eyelets/EYEAD.glb","type": "editable" },
+    { "id": "INTCC","description": "Crown_Interior_Stitches 2","code": "crown_interior_stitches_85d","path": "/cap/stitches/INTCC.glb","type": "editable" },
+    { "id": "INTVC","description": "Visor_Interior 2","code": "visor_interior_s85d","path": "/cap/visor/INTVC.glb","type": "editable" },
+    { "id": "LGOAC","description": "Logo 2","code": "logo_85d","path": "/cap/logo/LGOAC.glb","type": "editable" },
+    { "id": "STICC","description": "Crown_Stitches 2","code": "crown_stitches_85d","path": "/cap/crown/STICC.glb","type": "editable" },
+    { "id": "STIVC","description": "Stitches_Visor 2","code": "stitches_visor_85d","path": "/cap/stitches/STIVC.glb","type": "editable" },
+    { "id": "VSRAC","description": "Visor 2","code": "visor_85d","path": "/cap/visor/VSRAC.glb","type": "editable" },
+    { "id": "VSRAD","description": "Visor 3","code": "visor_4D","type": "editable","path": "/cap/visor/VSRAD.glb" },
+    { "id": "CRNBD","description": "Crown_Back 3","code": "crown_front_85d","path": "/cap/crown/CRNBD.glb","type": "editable" },
+    { "id": "CRNFD","description": "Crown_Front 3","code": "crown_front_85d","path": "/cap/crown/CRNFD.glb","type": "editable" },
+    { "id": "VSRC1","description": "Visor Curved","code": "cap_curved_visor","type": "editable","path": "/cap/visor/VSRC1.glb","img": "https://images-na.ssl-images-amazon.com/images/I/71Lgoiu9mVL._AC_UL1500_.jpg","sequence": 100 },
+    { "id": "VSRF1","description": "Visor Flat","code": "cap_flat_visor","type": "editable","path": "/cap/visor/VSRF1.glb","img": "https://www.wine-n-gear.com/wp-content/uploads/2019/11/Hat-2-7693-Black-1-NE402blackfront-1200W-600x600.png","sequence": 101 },
+    { "id": "INTF1","description": "InteriorFlatVisor","code": "cap_visor_flat_interior_NC","type": "non-editable","path": "/cap/interior/INTF1.glb","img": "","sequence": 100 },
+    { "id": "INTC1","description": "InteriorCurvedVisor","code": "cap_visor_curved_interior_NC","type": "non-editable","path": "/cap/interior/INTC1.glb","img": "","sequence": 101 },
+    { "id": "STIF1","description": "StitchesFlatVisor","code": "cap_visor_flat_stitches","type": "non-editable","path": "/cap/stitches/STIF1.glb","img": "","sequence": 100 },
+    { "id": "STIC1","description": "StitchesCurvedVisor","code": "cap_visor_curved_stitches","type": "non-editable","path": "/cap/stitches/STIC1.glb","img": "","sequence": 101 },
+
+    { "id": "BTNA1","description": "Button 1","code": "cap_button","type": "editable","path": "/cap/button/BTNA1.glb","img": "","sequence": 100 },
+    { "id": "CRNB1","description": "Back Crown 1","code": "cap_back_crown","type": "editable","path": "/cap/crown/CRNB1.glb","img": "","sequence": 100 },
+    { "id": "CRNF1","description": "Front Crown 1","code": "cap_front_crown","type": "editable","path": "/cap/crown/CRNF1.glb","img": "","sequence": 100 },
+    { "id": "DCKB1","description": "Back","code": "decoration_back","type": "editable","path": "/cap/decoration/DCKB1.glb","img": "","sequence": 100 },
+    { "id": "DCKF1","description": "Front","code": "decoration_front","type": "editable","path": "/cap/decoration/DCKF1.glb","img": "","sequence": 100 },
+    { "id": "DCKL1","description": "Left","code": "decoration_left","type": "editable","path": "/cap/decoration/DCKL1.glb","img": "","sequence": 100 },
+    { "id": "DCKR1","description": "Right","code": "decoration_right","type": "editable","path": "/cap/decoration/DCKR1.glb","img": "","sequence": 100 },
+    { "id": "EYEA1","description": "Eyelets 1","code": "cap_eyelets","type": "editable","path": "/cap/eyelets/EYEA1.glb","img": "","sequence": 100 },
+    { "id": "EYEAC","description": "Eyelets 85D","code": "cap_eyelets_AC","type": "non-editable","path": "/cap/eyelets/EYEAC.glb","img": "","sequence": 100 },
+
+    { "id": "INTB1","description": "Button","code": "interior_button","type": "editable","path": "/cap/interior/INTB1.glb","img": "","sequence": 100 },
+    { "id": "INTC1","description": "CurvedVisor","code": "interior_curved_visor","path": "/cap/interior/INTC1.glb","img": "","sequence": 100 },
+    { "id": "INTC2","description": "Crown","code": "interior_crown","type": "editable","path": "/cap/interior/INTC2.glb","img": "","sequence": 100 },
+    { "id": "INTF1","description": "FlatVisor","code": "interior_flat_visor","type": "editable","path": "/cap/interior/INTF1.glb","img": "","sequence": 100 },
+    { "id": "LGOB1","description": "logo","code": "logo","type": "editable","path": "/cap/logo/LGOB1.glb","img": "","sequence": 100 },
+    { "id": "STIC1","description": "CurvedVisor","code": "stitches_curved_visor","type": "editable","path": "/cap/stitches/STIC1.glb","img": "","sequence": 100 },
+    { "id": "STICB","description": "CrownBack","code": "stitches_crown_back","type": "editable","path": "/cap/stitches/STICB.glb","img": "","sequence": 100 },
+    { "id": "STICF","description": "CrownFront","code": "stitches_crown_front","type": "editable","path": "/cap/stitches/STICF.glb","img": "","sequence": 100 },
+    { "id": "STIF1","description": "Flat Visor","code": "stictches_fla_visor","type": "editable","path": "/cap/stitches/STIF1.glb","img": "","sequence": 100
+    }
+  ]
+}

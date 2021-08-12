@@ -1,0 +1,154 @@
+{
+  "rules": [
+    { "id": "BTNAC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "CRNBC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "CRNFC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "EYEAD", "requires": [], "includes": [], "excludes": [] },
+    { "id": "INTCC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "INTVC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "LGOAC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STICC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STIVC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "VSRAC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "VSRAD", "requires": [], "includes": [], "excludes": [] },
+    { "id": "CRNBD", "requires": [], "includes": [], "excludes": [] },
+    { "id": "CRNFD", "requires": [], "includes": [], "excludes": [] }
+  ],
+  "class": [
+    {
+      "id": "visor",
+      "display": true,
+      "description": "Visor",
+      "sequence": 100,
+      "objects": ["VSRAC", "VSRAD"]
+    },
+    {
+      "id": "button",
+      "display": true,
+      "description": "Button",
+      "sequence": 100,
+      "objects": ["BTNAC"]
+    },
+    {
+      "id": "crown",
+      "display": true,
+      "description": "Crown",
+      "sequence": 100,
+      "objects": ["CRNBC", "CRNFC", "CRNBD", "CRNFD"]
+    },
+    {
+      "id": "eyelets",
+      "display": true,
+      "description": "Eyelets",
+      "sequence": 100,
+      "objects": ["EYEAD"]
+    },
+    {
+      "id": "logo",
+      "display": true,
+      "description": "Logo",
+      "sequence": 100,
+      "objects": ["LGOAC"]
+    },
+    {
+      "id": "stitches",
+      "display": true,
+      "description": "Stitches",
+      "sequence": 100,
+      "objects": ["STICC", "STIVC"]
+    }
+  ],
+  "objects": [
+    {
+      "id": "BTNAC",
+      "description": "Button 2",
+      "code": "button_85d",
+      "path": "/cap/Button/BTNAC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "CRNBC",
+      "description": "Crown_Back 2",
+      "code": "crown_back_85d",
+      "path": "/cap/crown/CRNBC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "CRNFC",
+      "description": "Crown_Front 2",
+      "code": "crown_front_85d",
+      "path": "/cap/crown/CRNFC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "EYEAD",
+      "description": "Eyelets 2",
+      "code": "eyelets_85d",
+      "path": "/cap/eyelets/EYEAD.glb",
+      "type": "editable"
+    },
+    {
+      "id": "INTCC",
+      "description": "Crown_Interior_Stitches 2",
+      "code": "crown_interior_stitches_85d",
+      "path": "/cap/stitches/INTCC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "INTVC",
+      "description": "Visor_Interior 2",
+      "code": "visor_interior_s85d",
+      "path": "/cap/visor/INTVC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "LGOAC",
+      "description": "Logo 2",
+      "code": "logo_85d",
+      "path": "/cap/logo/LGOAC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "STICC",
+      "description": "Crown_Stitches 2",
+      "code": "crown_stitches_85d",
+      "path": "/cap/crown/STICC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "STIVC",
+      "description": "Stitches_Visor 2",
+      "code": "stitches_visor_85d",
+      "path": "/cap/stitches/STIVC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "VSRAC",
+      "description": "Visor 2",
+      "code": "visor_85d",
+      "path": "/cap/visor/VSRAC.glb",
+      "type": "editable"
+    },
+    {
+      "id": "VSRAD",
+      "description": "Visor 3",
+      "code": "visor_4D",
+      "type": "editable",
+      "path": "/cap/visor/VSRAD.glb"
+    },
+    {
+      "id": "CRNBD",
+      "description": "Crown_Back 3",
+      "code": "crown_front_85d",
+      "path": "/cap/crown/CRNBD.glb",
+      "type": "editable"
+    },
+    {
+      "id": "CRNFD",
+      "description": "Crown_Front 3",
+      "code": "crown_front_85d",
+      "path": "/cap/crown/CRNFD.glb",
+      "type": "editable"
+    }
+  ]
+}

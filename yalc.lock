@@ -1,0 +1,9 @@
+{
+  "version": "v1",
+  "packages": {
+    "react-three-editable": {
+      "signature": "12238b73f09bb5cbfcfe2746d66cecd8",
+      "file": true
+    }
+  }
+}

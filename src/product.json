@@ -1,0 +1,16 @@
+{
+    "crown": {
+        "crown1": {"id": "crown1","mesh": {}, "material":{}},
+        "crown2": {"id": "crown2","mesh": {}, "material":{}},
+        "crown3": {"id": "crown3","mesh": {}, "material":{}},
+        "crown4": {"id": "crown4","mesh": {}, "material":{}},
+        "crown5": {"id": "crown5","mesh": {}, "material":{}}
+    },
+    "visor": {
+        "visor1": {"id": "visor1","mesh": {}, "material":{}},
+        "visor2": {"id": "visor2","mesh": {}, "material":{}},
+        "visor3": {"id": "visor3","mesh": {}, "material":{}},
+        "visor4": {"id": "visor4","mesh": {}, "material":{}},
+        "visor5": {"id": "visor5","mesh": {}, "material":{}}
+    }
+}

@@ -1,0 +1,374 @@
+{
+  "rules": [
+    {
+      "id": "cap_button",
+      "requires": ["cap_button_interior_NC", "cap_crown_front"]
+    },
+    {
+      "id": "VSRF1",
+      "includes": ["INTF1", "STIF1"],
+      "excludes": ["VSRC1"],
+      "requires":["CRNF1"]
+    },
+    {
+      "id": "VSRC1",
+      "requires":["CRNF1"],
+      "includes": ["INTC1", "STIC1"],
+      "excludes": ["VSRF1"]
+    },
+    {
+      "id": "BTNA1",
+      "requires": ["CRNB1", "CRNF1", "INTB1"],
+      "excludes": []
+    },
+    {
+      "id": "CRNB1",
+      "requires": ["CRNF1"],
+      "includes":["EYEA1","STICB", "INTC2"],
+      "excludes": []
+    },
+    {
+      "id": "CRNF1",
+      "requires": ["STICF", "CRNB1"],
+      "excludes": []
+    },
+    {
+      "id": "EYEA1",
+      "requires": [],
+      "includes":["CRNB1", "CRNF1"],
+      "excludes": []
+    },
+    {
+      "id": "EYEAC",
+      "requires": [],
+      "includes":[],
+      "excludes": ["EYEA1"]
+    },
+    {
+      "id": "DCKB1",
+      "requires": [],
+      "excludes": []
+    },
+    {
+      "id": "DCKF1",
+      "requires": [],
+      "excludes": []
+    },
+    {
+      "id": "DCKR1",
+      "requires": [],
+      "excludes": []
+    },
+    {
+      "id": "DCKL1",
+      "requires": [],
+      "excludes": []
+    },
+    {
+      "id": "INTB1",
+      "requires": [],
+      "excludes": []
+    },
+    {
+      "id": "INTC2",
+      "requires": [],
+      "excludes": []
+    },
+    {
+      "id": "STICB"
+    },
+    {
+      "id": "STICF"
+    },
+    {
+      "id": "INTF1",
+      "requires": ["CRNB1"]
+    },
+    {
+      "id": "STIF1",
+      "requires":["VSRF1"]
+    },
+    {
+      "id": "STIC1",
+      "excludes":["STIF1"]
+    },
+    {
+      "id": "INTC1"
+    }
+  ],
+  "class": [
+    {
+      "id": "visor",
+      "description": "Visor",
+      "sequence": 100,
+      "objects": ["VSRC1", "VSRF1"],
+      "display": true,
+      "parentCategory": "cap"
+    },
+    {
+      "id": "button",
+      "description": "Button",
+      "sequence": 105,
+      "objects": ["BTNA1"],
+      "display": true,
+      "parentCategory": "cap"
+    },
+    {
+      "id": "crown",
+      "description": "Crown",
+      "sequence": 110,
+      "objects": ["CRNB1", "CRNF1"],
+      "display": true,
+      "parentCategory": "cap"
+    },
+    {
+      "id": "Eyelets",
+      "description": "Eyelets",
+      "sequence": 115,
+      "objects": ["EYEA1", "EYEAC"],
+      "display": true,
+      "parentCategory": "cap"
+    },
+    {
+      "id": "interior",
+      "description": "Interior",
+      "sequence": 130,
+      "objects": ["INTF1", "INTC1"],
+      "display": false,
+      "parentCategory": "cap"
+    },
+    {
+      "id": "stitches",
+      "description": "Stitches",
+      "sequence": 120,
+      "objects": ["STIF1", "STIC1"],
+      "display": false,
+      "parentCategory": "cap"
+    },
+    {
+      "id": "decorations",
+      "description": "Decorations",
+      "sequence": 125,
+      "objects": ["DCKF1", "DCKB1", "DCKR1", "DCKL1"],
+      "display": true,
+      "parentCategory": "cap"
+    }
+  ],
+  "objects": [
+    {
+      "id": "VSRC1",
+      "description": "CapCuvedVisor",
+      "code": "cap_curved_visor",
+      "type": "editable",
+      "path": "/cap/visor/VSRC1.glb",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/71Lgoiu9mVL._AC_UL1500_.jpg",
+      "sequence": 100
+    },
+    {
+      "id": "VSRF1",
+      "description": "CapFlatVisor",
+      "code": "cap_flat_visor",
+      "type": "editable",
+      "path": "/cap/visor/VSRF1.glb",
+      "img": "https://www.wine-n-gear.com/wp-content/uploads/2019/11/Hat-2-7693-Black-1-NE402blackfront-1200W-600x600.png",
+      "sequence": 101
+    },
+    {
+      "id": "INTF1",
+      "description": "InteriorFlatVisor",
+      "code": "cap_visor_flat_interior_NC",
+      "type": "non-editable",
+      "path": "/cap/interior/INTF1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "INTC1",
+      "description": "InteriorCurvedVisor",
+      "code": "cap_visor_curved_interior_NC",
+      "type": "non-editable",
+      "path": "/cap/interior/INTC1.glb",
+      "img": "",
+      "sequence": 101
+    },
+    {
+      "id": "STIF1",
+      "description": "StitchesFlatVisor",
+      "code": "cap_visor_flat_stitches",
+      "type": "non-editable",
+      "path": "/cap/stitches/STIF1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "STIC1",
+      "description": "StitchesCurvedVisor",
+      "code": "cap_visor_curved_stitches",
+      "type": "non-editable",
+      "path": "/cap/stitches/STIC1.glb",
+      "img": "",
+      "sequence": 101
+    },
+    {
+      "id": "BTNA1",
+      "description": "CapButton",
+      "code": "cap_button",
+      "type": "editable",
+      "path": "/cap/button/BTNA1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "CRNB1",
+      "description": "BackCrown",
+      "code": "cap_back_crown",
+      "type": "editable",
+      "path": "/cap/crown/CRNB1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "CRNF1",
+      "description": "FrontCrown",
+      "code": "cap_front_crown",
+      "type": "editable",
+      "path": "/cap/crown/CRNF1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "DCKB1",
+      "description": "Back",
+      "code": "decoration_back",
+      "type": "editable",
+      "path": "/cap/decoration/DCKB1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "DCKF1",
+      "description": "Front",
+      "code": "decoration_front",
+      "type": "editable",
+      "path": "/cap/decoration/DCKF1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "DCKL1",
+      "description": "Left",
+      "code": "decoration_left",
+      "type": "editable",
+      "path": "/cap/decoration/DCKL1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "DCKR1",
+      "description": "Right",
+      "code": "decoration_right",
+      "type": "editable",
+      "path": "/cap/decoration/DCKR1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "EYEA1",
+      "description": "Eyelets",
+      "code": "cap_eyelets",
+      "type": "editable",
+      "path": "/cap/eyelets/EYEA1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "EYEAC",
+      "description": "Eyelets 85D",
+      "code": "cap_eyelets_AC",
+      "type": "editable",
+      "path": "/cap/eyelets/EYEAC.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "INTB1",
+      "description": "Button",
+      "code": "interior_button",
+      "type": "editable",
+      "path": "/cap/interior/INTB1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "INTC1",
+      "description": "CurvedVisor",
+      "code": "interior_curved_visor",
+      "path": "/cap/interior/INTC1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "INTC2",
+      "description": "Crown",
+      "code": "interior_crown",
+      "type": "editable",
+      "path": "/cap/interior/INTC2.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "INTF1",
+      "description": "FlatVisor",
+      "code": "interior_flat_visor",
+      "type": "editable",
+      "path": "/cap/interior/INTF1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "LGOB1",
+      "description": "logo",
+      "code": "logo",
+      "type": "editable",
+      "path": "/cap/logo/LGOB1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "STIC1",
+      "description": "CurvedVisor",
+      "code": "stitches_curved_visor",
+      "type": "editable",
+      "path": "/cap/stitches/STIC1.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "STICB",
+      "description": "CrownBack",
+      "code": "stitches_crown_back",
+      "type": "editable",
+      "path": "/cap/stitches/STICB.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "STICF",
+      "description": "CrownFront",
+      "code": "stitches_crown_front",
+      "type": "editable",
+      "path": "/cap/stitches/STICF.glb",
+      "img": "",
+      "sequence": 100
+    },
+    {
+      "id": "STIF1",
+      "description": "Flat Visor",
+      "code": "stictches_fla_visor",
+      "type": "editable",
+      "path": "/cap/stitches/STIF1.glb",
+      "img": "",
+      "sequence": 100
+    }
+  ]
+}

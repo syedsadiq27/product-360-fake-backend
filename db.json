@@ -1,0 +1,83 @@
+{ 
+  "rules": [
+    { "id": "BTNAC", "requires": [], "includes": [], "excludes": ["BTNAE"] },
+    { "id": "BTNAE", "requires": [], "includes": [], "excludes": ["BTNAC"] },
+
+    { "id": "CRNBC", "requires": [], "includes": [], "excludes": ["CRNAE", "BKSTP"] },
+    { "id": "CRNAE", "requires": ["BKSTP"], "includes": [], "excludes": ["CRNBC"]},
+
+    { "id": "CRFAC", "requires": ["VSRAC"], "includes": [], "excludes": ["CRFAE", "VSRAE"]},
+    { "id": "CRFAE", "requires": ["VSRAE"], "includes": [], "excludes": ["CRFAC", "VSRAC"]},
+    
+
+    { "id": "EYEAD", "requires": [], "includes": [], "excludes": ["EYEAE"] },
+    { "id": "EYEAE", "requires": [], "includes": [], "excludes": ["EYEAD"] },
+    
+    { "id": "INTCC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "INTVC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "LGOAC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STICC", "requires": [], "includes": [], "excludes": [] },
+    { "id": "STIVC", "requires": [], "includes": [], "excludes": [] },
+
+    { "id": "VSRAC", "requires": ["CRFAC"], "includes": [], "excludes": ["VSRAE"] },
+    { "id": "VSRAD", "requires": [], "includes": [], "excludes": [] },
+    { "id": "VSRAE", "requires": ["CRFAE"], "includes": [], "excludes": ["VSRAC"] },
+
+  
+    { "id": "VSRAED", "requires": [], "includes": [], "excludes": [] },
+    { "id": "VSRAEI", "requires": [], "includes": [], "excludes": [] },
+    { "id": "VSRAES", "requires": [], "includes": [], "excludes": [] },
+
+
+  
+    { "id": "BKSTP", "requires": [], "includes": [], "excludes": []}
+
+  ],
+  "class": [
+    {"id": "visor","display": true,"description": "Visor","sequence": 100,"objects": ["VSRAE","VSRAC"]},
+    {"id": "button","display": true,"description": "Button","sequence": 100,"objects": ["BTNAE","BTNAC"]},
+    {"id": "crown","display": true,"description": "Crown","sequence": 100,"objects": ["CRFAE", "CRNAE", "CRNBC", "CRFAC"]},
+    {"id": "eyelets","display": true,"description": "Eyelets","sequence": 100,"objects": ["EYEAE", "EYEAD"]},
+    {"id": "logo","display": true,"description": "Logo","sequence": 100,"objects": ["LGOAC"]},
+    {"id": "stitches","display": false,"description": "Stitches","sequence": 100,"objects": ["STICC", "STIVC"]
+    },
+    {"id": "backstrap","display": true,"description": "BackStrap","sequence": 100,"objects": ["BKSTP"]
+    }
+  ],
+  "objects": [
+    {"id": "BTNAC","description": "Button 2","default": false, "code": "button_85d","path": "/cap/button/BTNAC.glb","type": "editable"},
+    {"id": "BTNAE","description": "Button 1","default": true, "code": "crown_front_85d","path": "/cap/button/BTNAE.glb","type": "editable"},
+
+    {"id": "CRNBC","description": "Crown Back 2 ","default": false, "code": "crown_back_85d","path": "/cap/crown/CRNBC.glb","type": "editable"},
+    {"id": "CRNBD","description": "Crown Back 3","default": false, "code": "crown_front_85d","path": "/cap/crown/CRNBD.glb","type": "editable"},
+    {"id": "CRNFD","description": "Crown Back","default": false, "code": "crown_front_85d","path": "/cap/crown/CRNFD.glb","type": "editable"},
+
+
+    {"id": "CRFAC","description": "Crown Front 2","default": false, "code": "crown_front_85d","path": "/cap/crown/CRFAC.glb","type": "editable"},
+    {"id": "CRFAE","description": "Crown Front 1","default": true, "code": "crown_front_85d","path": "/cap/crown/CRFAE.glb","type": "editable"},
+    {"id": "CRNAE","description": "Crown Back 1","default": true, "code": "crown_front_85d","path": "/cap/crown/CRNAE.glb","type": "editable"},
+
+
+    {"id": "EYEAD","description": "Eyelets 2 ","default": false, "code": "eyelets_85d","path": "/cap/eyelets/EYEAD.glb","type": "editable"},
+    {"id": "EYEAE","description": "Eyelets 1","default": true, "code": "crown_front_85d","path": "/cap/eyelets/EYEAE.glb","type": "editable"},
+
+
+    {"id": "VSRAC","description": "Visor 2 ","default": false, "code": "visor_85d","path": "/cap/visor/VSRAC.glb","type": "editable"},
+    {"id": "VSRAD","description": "Visor 3","default": false, "code": "visor_4D","type": "editable","path": "/cap/visor/VSRAD.glb"},
+    {"id": "VSRAE","description": "Visor 1","default": true, "code": "visor_301","type": "editable","path": "/cap/visor/VSRAE.glb"},
+
+
+    {"id": "LGOAC","description": "Crown Logo","default": true, "code": "logo_85d","path": "/cap/logo/LGOAC.glb","type": "editable"},
+    {"id": "BKSTP","description": "Back Strap","default": true, "code": "crown_front_85d","path": "/cap/crown/BKSTP.glb","type": "editable"},
+
+
+    {"id": "VSRAED","description": "Visor 4","default": false, "code": "visor_301","type": "editable","path": "/cap/visor/VSRAED.glb"},
+    {"id": "VSRAEI","description": "Visor 4","default": false, "code": "visor_301","type": "editable","path": "/cap/visor/VSRAEI.glb"},
+    {"id": "VSRAES","description": "Visor 4","default": false, "code": "visor_301","type": "editable","path": "/cap/visor/VSRAES.glb"},
+    {"id": "INTCC","description": "Crown_Interior_Stitches 2","default": false, "code": "crown_interior_stitches_85d","path": "/cap/stitches/INTCC.glb","type": "editable"},
+    {"id": "INTVC","description": "Visor_Interior 2","default": false, "code": "visor_interior_s85d","path": "/cap/visor/INTVC.glb","type": "editable"},
+ 
+    {"id": "STICC","description": "Crown_Stitches 2","default": false, "code": "crown_stitches_85d","path": "/cap/crown/STICC.glb","type": "editable"},
+    {"id": "STIVC","description": "Stitches_Visor 2","default": false, "code": "stitches_visor_85d","path": "/cap/stitches/STIVC.glb","type": "editable"}
+  ]
+}
